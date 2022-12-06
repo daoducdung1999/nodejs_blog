@@ -24,9 +24,7 @@ class CourseController {
         const course = new Course(req.body)
         course.save()
             .then(() => res.redirect('/me/stored/courses'))
-            .catch(error => {
-                
-            })
+            .catch(next)
     }
 
     // [GET] /courses/:id/edit
